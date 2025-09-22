@@ -12,7 +12,7 @@ pipeline {
         // Stage 1: Pull code from GitHub
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/mahroot/jenkins-nodejs-k8s-cicd.git'
+                git branch: 'main', url: 'https://github.com/mahroot/nodejs.automate-webapp.git'
             }
         }
 
