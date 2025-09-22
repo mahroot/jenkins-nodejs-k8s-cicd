@@ -1,0 +1,83 @@
+📄 Documentation
+
+Project: CI/CD Pipeline with Jenkins and Docker (Node.js App)
+
+1. Objective
+
+To automate the process of building, containerizing, and deploying a Node.js application using Jenkins as the CI/CD tool, DockerHub for image storage, and Docker for running the application.
+
+---
+ 2. Tools & Technologies
+
+Node.js – Sample web application
+Docker – Containerization
+Jenkins – CI/CD automation server
+DockerHub – Container image registry
+
+---
+
+ 3. Steps Performed
+
+(a) Setup Jenkins & Agent
+
+Installed Jenkins and configured a build agent (node).
+Installed required plugins: Git, Docker, and Pipeline.
+Configured credentials in Jenkins for GitHub and DockerHub.
+
+(b) Node.js Application
+
+ Created a simple Express.js app (`index.js`).
+ Added `package.json` with dependencies.
+ Wrote a Dockerfile to build the app image.
+
+(c) Jenkins Pipeline (Jenkinsfile)
+
+Defined pipeline stages:
+
+  1. Checkout Code – from GitHub.
+  2. Install Dependencies – `npm install`.
+  3. Run Tests – basic test stage.
+  4. Build Docker Image – `docker build`.
+  5. Push to DockerHub – using Jenkins credentials.
+  6. Run Container (optional) – Jenkins starts the app using Docker.
+
+(d) DockerHub
+
+ Created public repo: omrajput/nodejs-demo-app.
+ Jenkins pushed built images here.
+
+---
+
+4. Pipeline Workflow
+
+1. Developer pushes code to GitHub.
+2. Jenkins pulls code.
+3. Installs dependencies + runs tests.
+4. Builds Docker image.
+5. Pushes image to DockerHub.
+6. Application can be run using Docker:
+
+   ```bash
+   docker pull /nodejs-demo-app:latest
+   docker run -p 3000:3000 omrajput/nodejs-demo-app:latest
+   ```
+
+---
+
+5. Results
+
+ Automated CI/CD pipeline achieved.
+ Jenkins integrates with Docker & DockerHub seamlessly.
+ Application is containerized and portable.
+
+---
+
+6. Improvements (Future Scope)
+
+ Add automated unit tests.
+ Add deployment to Kubernetes or a cloud server.
+ Use version tagging (`v1`, `v2`, etc.) instead of `latest`.
+ Integrate monitoring and logging.
+
+---
+
