@@ -58,7 +58,7 @@ Defined pipeline stages:
 6. Application can be run using Docker:
 
    ```bash
-   docker pull /nodejs-demo-app:latest
+   docker pull omrajput/nodejs-demo-app:latest
    docker run -p 3000:3000 omrajput/nodejs-demo-app:latest
    ```
 
@@ -70,14 +70,4 @@ Defined pipeline stages:
  Jenkins integrates with Docker & DockerHub seamlessly.
  Application is containerized and portable.
 
----
-
-6. Improvements (Future Scope)
-
- Add automated unit tests.
- Add deployment to Kubernetes or a cloud server.
- Use version tagging (`v1`, `v2`, etc.) instead of `latest`.
- Integrate monitoring and logging.
-
----
 
