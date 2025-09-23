@@ -39,7 +39,7 @@ Defined pipeline stages:
   3. Run Tests – basic test stage.
   4. Build Docker Image – `docker build`.
   5. Push to DockerHub – using Jenkins credentials.
-  6. Run Container (optional) – Jenkins starts the app using Docker.
+  6. Run Container  Jenkins starts the app using Docker.
 
 (d) DockerHub
 
@@ -47,6 +47,10 @@ Defined pipeline stages:
  Jenkins pushed built images here.
 
 ---
+
+
+
+
 
 4. Pipeline Workflow
 
