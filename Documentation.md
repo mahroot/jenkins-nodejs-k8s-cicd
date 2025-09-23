@@ -47,13 +47,7 @@ Defined pipeline stages:
  Jenkins pushed built images here.
 
 ---
-
-
-
-
-
 4. Pipeline Workflow
-
 1. Developer pushes code to GitHub.
 2. Jenkins pulls code.
 3. Installs dependencies + runs tests.
